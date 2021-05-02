@@ -1,0 +1,38 @@
+Test Cal
+--------
+
+Day 1 (Thursday)
+You have 0 errands:
+
+Day 2 (Friday)
+You have 2 errands:
+	[1] Don't forget the thing!
+	[2] Don't forget the other thing!
+
+Day 3 (Saturday)
+You have 1 errands:
+	[1] From 00:00 to 23:59: Hello! This title has colons: the drama of encoding
+
+Day 4 (Sunday)
+You have 0 errands:
+
+Day 5 (Monday)
+You have 1 errands:
+	[1] Have a good cry
+
+Day 6 (Tuesday)
+You have 1 errands:
+	[1] From 04:30 to 06:45: Here's something with a time
+
+Day 7 (Wednesday)
+You have 0 errands:
+
+Day 8 (Thursday)
+You have 0 errands:
+
+Day 9 (Friday)
+You have 0 errands:
+
+Day 10 (Saturday)
+You have 0 errands:
+

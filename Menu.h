@@ -1,7 +1,6 @@
 /*
 Author: Patrick Gelvin
 Date: April 10th, 2021
-Description: Assignment 5 -Implement a calendar in c++
 */
 
 #pragma once
@@ -9,13 +8,7 @@ Description: Assignment 5 -Implement a calendar in c++
 #define _MENU_H
 
 /*
-Okay this is probably gonna be a hot mess
-but it is 3:48 am and i'm losing it
-so yeah
-~bon apetit~
-
-I want to do my menu in a sorta half baked FSM
-I *will* regret this
+I'm doing my menu in a sorta half baked FSM
 Things that are quick (asking 0 or 1 questions) can stay in the same state
 Any more and I'll transition
 
@@ -25,7 +18,7 @@ Create (Create a new calendar)
 TopMenu (Calendar is open)
 DayMenu (Modify/View a specific day)
 AddErrand (Add an errand to the calendar)
-RemoveErrand (Remove [and verify] an errand from the calendar)
+RemoveErrand (Remove an errand from the calendar)
 */
 
 class Machine;

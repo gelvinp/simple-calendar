@@ -25,7 +25,7 @@ Calendar.o: Calendar.cpp Calendar.h StringUtils.h
 Menu.o: Menu.cpp Menu.h Calendar.h Day.h Errand.h FileUtils.h StringUtils.h
 	$(CXX) $(FLAGS) -c -o $@ $<
 
-main.o: main.cpp FileUtils.h Menu.h
+main.o: main.cpp Menu.h
 	$(CXX) $(FLAGS) -c -o $@ $<
 
 .PHONY: clean

@@ -1,7 +1,6 @@
 /*
 Author: Patrick Gelvin
 Date: April 10th, 2021
-Description: Assignment 5 -Implement a calendar in c++
 */
 
 #pragma once
@@ -12,8 +11,8 @@ Description: Assignment 5 -Implement a calendar in c++
 #include <regex>
 
 // God I need compilers to have better support for c++20
-// I just want to use std::format but NO, literally 0 compilers
-// support that yet so we're left with this hairbrained mess :(
+// I just want to use std::format but NO, literally only MSVC
+// supports that yet so we're left with this hairbrained mess :(
 
 template<typename... Args>
 std::string stringFormat(const char* fmtString, Args... args) {

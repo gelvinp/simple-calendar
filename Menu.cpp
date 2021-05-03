@@ -1,10 +1,7 @@
 /*
 Author: Patrick Gelvin
 Date: April 10th, 2021
-Description: Assignment 5 -Implement a calendar in c++
 */
-
-// How did I get here
 
 #include <iostream>
 #include <limits>
@@ -148,7 +145,7 @@ bool stateCreate::run(Machine* const machine) {
                     "[5] Friday\n"
                     "[6] Saturday\n"
                     "[7] Sunday\n\n";
-    
+
     int choice = Machine::getInt("?> ", 1, 7);
 
     Days startDay = static_cast<Days>(choice - 1);
@@ -170,7 +167,7 @@ bool stateTopMenu::run(Machine* const machine) {
                     "[3] Print Calendar (to file)\n"
                     "[4] Save Calendar\n"
                     "[5] Close Calendar\n\n";
-    
+
     int choice = Machine::getInt("?> ", 1, 5);
 
     switch (choice) {
@@ -204,7 +201,7 @@ void stateTopMenu::selectDay(Machine* const machine) {
     assert(machine->activeCal != nullptr);
 
     std::cout << "\nWhich day would you like to view? (1-" << machine->activeCal->getNumDays() << ")\n";
-    
+
     int choice = Machine::getInt("?> ", 1, machine->activeCal->getNumDays());
 
     machine->activeDay = choice - 1;
@@ -262,7 +259,7 @@ bool stateDayMenu::run(Machine* const machine) {
                 "[1] Add Errand\n"
                 "[2] Remove Errand\n"
                 "[3] Return\n";
-    
+
     int choice = Machine::getInt("?> ", 1, 3);
 
     switch(choice) {
@@ -294,7 +291,7 @@ bool stateAddErrand::run(Machine* const machine) {
                     "[1] Reminder\n"
                     "[2] Appointment\n"
                     "[3] Cancel\n";
-    
+
     int choice = Machine::getInt("?> ", 1, 3);
 
     if (choice == 3) {
@@ -320,7 +317,7 @@ bool stateAddErrand::run(Machine* const machine) {
 
     std::cout << "Enter the end hour (0-23)\n";
     endHour = Machine::getInt("?> ", 0, 23);
-    
+
     std::cout << "Enter the end minute (0-59)\n";
     endMinute = Machine::getInt("?> ", 0, 59);
 

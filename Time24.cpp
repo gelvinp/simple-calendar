@@ -1,7 +1,6 @@
 /*
 Author: Patrick Gelvin
 Date: April 10th, 2021
-Description: Assignment 5 -Implement a calendar in c++
 */
 
 #include <string>

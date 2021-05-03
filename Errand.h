@@ -1,7 +1,6 @@
 /*
 Author: Patrick Gelvin
 Date: April 10th, 2021
-Description: Assignment 5 -Implement a calendar in c++
 */
 
 #pragma once
@@ -20,16 +19,16 @@ class Reminder {
     public:
     Reminder(const std::string&);
     virtual ~Reminder() = default;
-    virtual char type() { return 'r'; } // I *know* typeof() is a thing but I could NOT get it to work :(
+    virtual char type() { return 'r'; } // I *know* typeof() is a thing but I could not get it to work and this was easier
 
     void setText(const std::string&);
     // toString is the getter for text
-    
+
     virtual std::string toString() const;
-    friend std::ostream& operator<< (std::ostream&, const Reminder&);  
+    friend std::ostream& operator<< (std::ostream&, const Reminder&);
 
     virtual void serialize(std::ostream&) const;
-    static std::optional<Reminder*> deserialize(std::istream&);  
+    static std::optional<Reminder*> deserialize(std::istream&);
 };
 
 class Appointment: public Reminder {
@@ -38,18 +37,18 @@ class Appointment: public Reminder {
     public:
     Appointment(const std::string&, const Time24&, const Time24&);
     ~Appointment() = default;
-    char type() { return 'a'; }
+    char type() override { return 'a'; }
 
     void setStartTime(const Time24&);
     void setEndTime(const Time24&);
     const Time24& getStartTime() const;
     const Time24& getEndTime() const;
 
-    std::string toString() const;
+    std::string toString() const override;
     friend std::ostream& operator<< (std::ostream&, const Appointment&);
 
-    void serialize(std::ostream&) const;
-    static std::optional<Reminder*> deserialize(std::istream&);  
+    void serialize(std::ostream&) const override;
+    static std::optional<Reminder*> deserialize(std::istream&);
 };
 
 #endif
